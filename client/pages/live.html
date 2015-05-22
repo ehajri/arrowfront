@@ -1,0 +1,46 @@
+<template name="livePage">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Last</th>
+        <th>Change</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Volume</th>
+        <th>Trade</th>
+        <th>Value</th>
+        <th>Previous</th>
+        <th>Reference</th>
+        <th>Prev. Date</th>
+        <th>Bid</th>
+        <th>Ask</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each quotes}}
+        {{> quote}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="quote">
+  <tr>
+    <td>{{ticker_id}}</td>
+    <td>{{last}}</td>
+    <td>{{change}}</td>
+    <td>{{open}}</td>
+    <td>{{high}}</td>
+    <td>{{low}}</td>
+    <td class="right">{{formattedNumber vol}}</td>
+    <td>{{trade}}</td>
+    <td class="right">{{formattedNumber value}}</td>
+    <td>{{prev}}</td>
+    <td>{{ref}}</td>
+    <td>{{formattedDate prev_date }}</td>
+    <td>{{bid}}</td>
+    <td>{{ask}}</td>
+  </tr>
+</template>

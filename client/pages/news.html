@@ -1,0 +1,17 @@
+<template name="newsPage">
+  {{#each news}}
+    {{> article}}
+  {{/each}}
+</template>
+
+<template name="article">
+  <div class="panel panel-default" style="text-align: right; direction: rtl">
+      <div class="panel-heading">
+        {{headline}}
+        <div class="pull-left" style="direction: ltr;">
+          {{formatDate1 date}}
+        </div>
+      </div>
+      <div class="panel-body">{{message}}</div>
+  </div>
+</template>

@@ -1,0 +1,24 @@
+<template name="testPage">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Message</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tests}}
+        {{> test}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="test">
+  <tr>
+    <td>{{id}}</td>
+    <td>{{msg}}</td>
+    <td>{{formattedDate dt}}</td>
+  </tr>
+</template>

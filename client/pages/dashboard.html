@@ -1,0 +1,28 @@
+<template name="dashboardPage">
+  {{#if runnings.length}}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>app</th>
+        <th>last run</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each runnings}}
+        {{> apprunning}}
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <center><h3>EVERYTHING IS OK!</h3><p>{{currentTime}}</p></center>
+  {{/if}}
+</template>
+
+<template name="apprunning">
+  <tr>
+      <td>{{id}}</td>
+      <td>{{funcname}}</td>
+      <td>{{formatDate2 lastrun}}</td>
+  </tr>
+</template>

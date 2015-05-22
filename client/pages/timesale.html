@@ -1,0 +1,26 @@
+<template name="timesalePage">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each timesales}}
+        {{> timesalerecord}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="timesalerecord">
+  <tr>
+    <td>{{ticker_id}}</td>
+    <td>{{price}}</td>
+    <td>{{quantity}}</td>
+    <td>{{formatDate2 datetime}}</td>
+  </tr>
+</template>

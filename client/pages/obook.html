@@ -1,0 +1,32 @@
+<template name="obookPage">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Price</th>
+        <th>Bid</th>
+        <th>Bid Quantity</th>
+        <th>Ask</th>
+        <th>Ask Quantity</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each orders}}
+        {{> order}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="order">
+  <tr>
+    <td>{{ticker_id}}</td>
+    <td>{{price}}</td>
+    <td>{{bid}}</td>
+    <td>{{bid_qty}}</td>
+    <td>{{ask}}</td>
+    <td>{{ask_qty}}</td>
+    <td>{{formatDate2 timestamp}}</td>
+  </tr>
+</template>
