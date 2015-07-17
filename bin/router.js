@@ -24,6 +24,10 @@ Router.route('/timesale', {
   name: 'timesalePage'
 });
 
-Router.route('/dashboard', {
+Router.route('/favorite', {
+  name: 'FavoritePage'
+});
+
+Router.route('/', {
   name: 'dashboardPage'
 });

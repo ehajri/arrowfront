@@ -1,0 +1,11 @@
+<template name="FavoritePage">
+  <h2>Favorite 2</h2>
+  <ul>
+    {{#each portfolio}}
+      {{> stock}}
+    {{/each}}
+  </ul>
+</template>
+<template name="stock">
+  <li>{{ticker_id}} - {{price}} - {{quantity}} - {{action}}</li>
+</template>
